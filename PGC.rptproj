@@ -53,6 +53,7 @@
     <DataSource Include="SyteLineDW.rds" />
   </ItemGroup>
   <ItemGroup>
+    <Report Include="Copy of _Template.rdl" />
     <Report Include="_Template.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />

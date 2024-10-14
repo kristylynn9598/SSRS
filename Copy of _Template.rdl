@@ -9,7 +9,7 @@
       <am:Name>SSDTRS</am:Name>
       <am:Version>17.11.35312.102</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2024-10-14T17:16:44.2242172Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2024-10-14T17:25:45.6695289Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
   <AutoRefresh>0</AutoRefresh>
@@ -40,15 +40,16 @@
         <CommandText>SELECT [ID]
       ,[UniqueName]
       ,[EntityCustomerName]
-      ,Upper([site_ref]) [site_ref]
+      ,upper([site_ref]) [site_ref]
       ,[CommonName]
       ,[Type]
   FROM [dbo].[CommonNames] CN with(NoLock)
-where isnull(site_ref,'') in(@SR) 
+where upper(isnull(site_ref,'')) in(@SR) 
 And(
  isnull([CommonName],'') Like @Name
 or isnull([EntityCustomerName],'') Like @Name
-or isnull([CommonName],'') Like @Name)</CommandText>
+or isnull([CommonName],'') Like @Name)
+Order by [site_ref], [Type], [CommonName]</CommandText>
       </Query>
       <Fields>
         <Field Name="ID">
@@ -103,10 +104,10 @@ Order by SiteRef</CommandText>
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.86806in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>2.89583in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.59722in</Width>
@@ -165,7 +166,7 @@ Order by SiteRef</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>site ref</Value>
+                                  <Value>Site Ref</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -555,7 +556,7 @@ Order by SiteRef</CommandText>
             </TablixRowHierarchy>
             <DataSetName>Data</DataSetName>
             <Height>0.45in</Height>
-            <Width>10.24306in</Width>
+            <Width>12.00695in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -563,14 +564,14 @@ Order by SiteRef</CommandText>
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2in</Height>
+        <Height>0.45in</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>10.24306in</Width>
+      <Width>12.13889in</Width>
       <Page>
         <PageHeader>
           <Height>1.18625in</Height>
@@ -596,7 +597,7 @@ Order by SiteRef</CommandText>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Title</Value>
+                      <Value>Common Names</Value>
                       <Style>
                         <FontSize>22pt</FontSize>
                         <FontWeight>Bold</FontWeight>
