@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="SyteLineDW">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=pgcsql01.database.windows.net;Initial Catalog=SytelineDW</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>32e7f8b1-9a8d-4a3e-a6e1-9a1c7b64feb7</DataSourceID>
+</RptDataSource>
