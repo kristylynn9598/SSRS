@@ -12,7 +12,7 @@
     <TargetDatasetFolder>Datasets</TargetDatasetFolder>
     <TargetDatasourceFolder>Data Sources</TargetDatasourceFolder>
     <TargetReportPartFolder>Report Parts</TargetReportPartFolder>
-    <TargetServerURL>http://vmpgcsql01/reportserver</TargetServerURL>
+    <TargetServerURL>http://20.185.52.128/reportserver</TargetServerURL>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'DebugLocal' ">
     <FullPath>DebugLocal</FullPath>
@@ -53,7 +53,8 @@
     <DataSource Include="SyteLineDW.rds" />
   </ItemGroup>
   <ItemGroup>
-    <Report Include="Copy of _Template.rdl" />
+    <Report Include="CommonNames.rdl" />
+    <Report Include="Quotes by Year Month.rdl" />
     <Report Include="_Template.rdl" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />

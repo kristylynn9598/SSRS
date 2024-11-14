@@ -2,7 +2,7 @@
 <RptDataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="PGCVM">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=52.233.93.201,1433;Initial Catalog=PGC</ConnectString>
+    <ConnectString>Data Source=20.185.52.128,1433\pgc;Initial Catalog=EDW</ConnectString>
   </ConnectionProperties>
   <DataSourceID>bc38630b-c644-410e-bb94-ec2728993efa</DataSourceID>
 </RptDataSource>
